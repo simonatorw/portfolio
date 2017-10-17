@@ -1,0 +1,115 @@
+@import 'chartist/dist/chartist.min.css';
+.ct-legend {
+    position: relative;
+    z-index: 10;
+    list-style: none;
+    text-align: center;
+
+    li {
+        position: relative;
+        padding-left: 23px;
+        margin-right: 10px;
+        margin-bottom: 3px;
+        cursor: pointer;
+        display: inline-block;
+
+        &:before {
+            width: 12px;
+            height: 12px;
+            position: absolute;
+            left: 0;
+            content: '';
+            border: 3px solid transparent;
+            border-radius: 2px;
+        }
+        &.inactive:before {
+            background: transparent;
+        }        
+    }
+    &.ct-legend-inside {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    &.ct-legend-inside li{
+        display: block;
+        margin: 0;
+    }
+    .ct-series-0:before {
+        background-color: #bebebe;
+        border-color: #bebebe;
+    }
+    .ct-series-1:before {
+        background-color: #1ab4e9;
+        border-color: #1ab4e9;
+    }
+    .ct-series-2:before {
+        background-color: #0781c5;
+        border-color: #0781c5;
+    }
+    .ct-series-3:before {
+        background-color: #70ae57;
+        border-color: #70ae57;
+    }
+    .ct-series-4:before {
+        background-color: #666;
+        border-color: #666;
+    }
+}
+.ct-line {
+	stroke-width: 2px;
+}
+.ct-series-a .ct-line {
+	stroke: #bebebe;
+}
+.ct-series-b .ct-line {
+	stroke: #1ab4e9;
+}
+.ct-series-c .ct-line {
+	stroke: #0781c5;
+}
+.ct-series-d .ct-line {
+	stroke: #70ae57;
+}
+.ct-series-e .ct-line {
+	stroke: #666;
+}
+.ct-bar {
+	stroke-width: 16px;
+}
+.ct-series-a .ct-bar {
+	stroke: #bebebe;
+}
+.barChart {
+	.ct-series-a .ct-bar {
+		stroke: #c6e0b5;
+	}
+	.ct-series-b .ct-bar {
+		stroke: #ffafac;
+	}
+}
+.stackBarChartUp {
+	.ct-series-a .ct-bar {
+		stroke: #f2f2f2;
+	}
+	.ct-series-b .ct-bar {
+		stroke: #c6e0b5;
+	}
+	.ct-series-c .ct-bar {
+		stroke: #70ae57;
+	}
+}
+.stackBarChartDown {
+	.ct-series-a .ct-bar {
+		stroke: #f2f2f2;
+	}
+	.ct-series-b .ct-bar {
+		stroke: #ffafac;
+	}
+	.ct-series-c .ct-bar {
+		stroke: #e74d47;
+	}
+}
+.ct-axis-title {
+	fill: #595959
+}

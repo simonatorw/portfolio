@@ -1,0 +1,29 @@
+.dataGrid {
+	width: 100%;
+	border-collapse: collapse;
+
+	.gridHead {
+		font-weight: normal;
+		border-bottom: 1px solid #808080;
+		padding: 5px;
+	}
+	.gridCell {
+		/* border-bottom: 1px solid lightgrey; */
+		padding: 5px;
+
+		&.amt {
+			text-align: right;
+		}
+		&.empty {
+			text-align: center;
+		}
+		&.chart {
+			padding: 0 5px;
+		}
+	}
+	tr:last-child {
+		.gridCell {
+			border-bottom: 0;
+		}
+	}
+}

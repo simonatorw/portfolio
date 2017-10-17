@@ -1,0 +1,13 @@
+.themePicker {
+	float: right;
+
+	.themeLabel {
+		margin-right: 6px;
+	}
+	.themeSelect {
+		padding: 3px 0;
+		border: 1px solid #bebebe;
+		margin-right: 0;
+		margin-top: 5px;
+	}
+}

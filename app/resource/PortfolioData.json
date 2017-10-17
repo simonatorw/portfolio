@@ -1,0 +1,42 @@
+{
+    "headers": ["Portfolio Name", "", "Value ($)"],
+    "data": [
+        {
+            "portfolioName": "Portfolio 1",
+			"portfolioId": 0,
+            "metric1": "",
+            "value": 100000 
+        },
+		{
+            "portfolioName": "Portfolio 2",
+			"portfolioId": 1,
+            "metric1": "",
+            "value": 300000 
+        },
+		{
+            "portfolioName": "Portfolio 3",
+			"portfolioId": 2,
+            "metric1": "",
+            "value": 200000 
+        },
+		{
+            "portfolioName": "Portfolio 4",
+			"portfolioId": 3,
+            "metric1": "",
+            "value": 600000 
+        },
+		{
+            "portfolioName": "Portfolio 5",
+			"portfolioId": 4,
+            "metric1": "",
+            "value": 10000 
+        },
+		{
+            "portfolioName": "Portfolio 6",
+			"portfolioId": 5,
+            "metric1": "",
+            "value": 300000 
+        }
+
+    ]
+}
