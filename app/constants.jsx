@@ -1,4 +1,4 @@
-const server = 'http://127.0.0.2:8124';
+const server = 'http://127.0.0.1:8125';
 
 export const dataUrls = {
 	PORTFOLIO_DATA: `${server}/Portfolio`

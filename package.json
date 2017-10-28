@@ -7,7 +7,8 @@
     "test": "jest",
     "start": "webpack-dev-server --env development",
     "build": "webpack --env production",
-    "test-cov": "jest --coverage"
+    "test:coverage": "jest --coverage",
+    "test:watch": "jest --watch"
   },
   "repository": {
     "type": "git",
@@ -16,6 +17,21 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "jest": {
+    "transform": {
+      "^.+\\.jsx?$": "<rootDir>/jest-preprocessor.jsx"
+    },
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/app/mocks/fileMock.jsx",
+      "\\.(css|less)$": "<rootDir>/app/mocks/styleMock.jsx"
+    },
+    "setupTestFrameworkScriptFile": "<rootDir>/app/mocks/localStorage.jsx",
+    "coveragePathIgnorePatterns": [
+      "<rootDir>/node_modules/",
+      "<rootDir>/app/mocks/",
+      "<rootDir>/app/utils/chartist-plugin-axistitle.jsx"
+    ]
+  },
   "dependencies": {
     "babel-polyfill": "^6.26.0",
     "chartist": "^0.11.0",
@@ -23,12 +39,12 @@
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-redux": "^5.0.5",
+    "react-router-dom": "^4.2.2",
     "redux": "^3.7.2",
     "redux-saga": "^0.15.6"
   },
   "devDependencies": {
     "babel-core": "^6.25.0",
-    "babel-jest": "^20.0.3",
     "babel-loader": "^7.1.1",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
@@ -41,7 +57,7 @@
     "glob": "^7.1.2",
     "html-webpack-plugin": "^2.29.0",
     "imports-loader": "^0.7.1",
-    "jest": "^20.0.4",
+    "jest": "^21.2.1",
     "optimize-css-assets-webpack-plugin": "^3.0.0",
     "postcss-cssnext": "^3.0.2",
     "postcss-import": "^10.0.0",

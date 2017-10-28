@@ -1,6 +1,6 @@
-export function getTodaysDate() {
+export function getTodaysDate(str) {
     const monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-    const d = new Date();
+    const d = str ? new Date(str) : new Date();
 
     return `${monthNames[d.getMonth()]} ${d.getDate()}, ${d.getFullYear()}`;
 }

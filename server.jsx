@@ -4,6 +4,9 @@ const app = express();
 const fs = require('fs');
 const path = require('path');
 
+const port = 8125;
+const url = '127.0.0.1';
+
 var allowCrossDomain = function(req, res, next) {
     res.header('Access-Control-Allow-Origin', '*');
     res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
@@ -14,8 +17,8 @@ var allowCrossDomain = function(req, res, next) {
 app.use(allowCrossDomain);
 const server = require('http').createServer(app);
 
-server.listen(8124, '127.0.0.2');
-console.log('Server running at http://127.0.0.1:8124');
+server.listen(port, url);
+console.log(`Server running at http://${url}:${port}`);
 
 function sendJson(name, res) {
 	const filePath = path.join(__dirname, `./app/resource/${name}Data.json`);

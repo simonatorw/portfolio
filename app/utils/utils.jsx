@@ -6,8 +6,6 @@ import themes from '../components/ThemePicker/themes';
 import BarChart from '../components/charts/BarChart/BarChart';
 import LineChart from '../components/charts/LineChart/LineChart';
 
-export const getDataActions = () => (Object.keys(actionTypes)).filter(item => item.includes('_DATA'));
-
 export function getChart(chartType, data) {
 	switch(chartType) {
 		case chartTypes.LINE:
@@ -24,9 +22,9 @@ export function getChart(chartType, data) {
 }
 
 export function saveThemeToStorage(theme) {
-	localStorage[theming.STORAGE_KEY] = theme;
+	localStorage.setItem(theming.STORAGE_KEY, theme);
 }
 
-export const retreiveTheme = theme => localStorage[theming.STORAGE_KEY] ? localStorage[theming.STORAGE_KEY] : Object.keys(themes)[0];
+export const retreiveTheme = theme => localStorage.getItem(theming.STORAGE_KEY) ? localStorage.getItem(theming.STORAGE_KEY) : Object.keys(themes)[0];
 
 export const formatCurrency = (num, localeStr = locale.US) => num.toLocaleString(localeStr, { minimumFractionDigits: 2 });
