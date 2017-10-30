@@ -6,7 +6,7 @@ import BarChart from '../components/charts/BarChart/BarChart';
 import { getChart, saveThemeToStorage, retreiveTheme, formatCurrency } from './utils';
 
 describe('Test getChart function', () => {
-	const data = {};
+	const data = {};;
 	
     test('It will return placeholder if it is not a line or bar chart', () => {
         const chartType = 'foo';
